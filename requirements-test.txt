@@ -1,0 +1,9 @@
+-r requirements.txt
+
+coverage
+flake8
+pylint
+
+pytest
+pytest-cov
+pytest-testinfra
