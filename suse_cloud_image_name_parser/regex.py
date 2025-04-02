@@ -122,12 +122,12 @@ class SUSECloudImageNameRegexp:
         # elements that can appear after the '-v{date}' in the
         # image name.
         suffix_pattern = (cls.suffix_pre +
-                          cls.gen_id +
                           cls.ecs +
                           cls.virt_type +
                           cls.ssd +
                           cls.arch +
                           cls.mp_account +
+                          cls.gen_id +
                           cls.suffix_post)
 
         # Combine the above patterns with the uuid prefix and
