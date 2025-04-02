@@ -9,6 +9,9 @@ jobs:
   deploy:
 
     runs-on: ubuntu-latest
+    environment: main
+    permissions:
+      id-token: write
 
     steps:
     - uses: actions/checkout@v2
