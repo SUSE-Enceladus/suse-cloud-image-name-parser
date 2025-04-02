@@ -18,8 +18,8 @@
 
 import logging
 
-from image_name.regex import SUSECloudImageNameRegexp
-from image_name.errors import (
+from suse_cloud_image_name_parser.regex import SUSECloudImageNameRegexp
+from suse_cloud_image_name_parser.errors import (
     BadRegexMatchError,
     UndefinedOvalProductError,
     UndefinedProductMajorError
