@@ -368,9 +368,10 @@ class SUSECloudImageName:  # pylint: disable=R0904
             "-v{date}"
         ]
 
-        if self.has_suffix:
-            if not self.is_azure:
-                name_parts.append(self.suffix)
+        if self.has_gen_id:
+            name_parts.append(self.suffix.replace(f'-{self.gen_id}', ''))
+        else:
+            name_parts.append(self.suffix)
 
         return ''.join(name_parts)
 
@@ -385,10 +386,6 @@ class SUSECloudImageName:  # pylint: disable=R0904
         name_parts = [
             self.generic_name.format(date=self.datestamp)
         ]
-
-        if self.has_uuid_prefix:
-            if not self.is_azure:
-                name_parts.append(self.uuid_prefix)
 
         return '-'.join(name_parts)
 
@@ -461,11 +458,6 @@ class SUSECloudImageName:  # pylint: disable=R0904
     def is_ecs(self):
         """ Check if 'ecs' is set"""
         return self.ecs is not None
-
-    @property
-    def is_ec2_and_ecs(self):
-        """ Check if 'ecs' is set"""
-        return self.is_ec2 and self.is_ecs
 
     @property
     def virt_type(self):
