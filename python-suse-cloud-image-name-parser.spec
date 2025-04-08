@@ -19,7 +19,7 @@
 
 
 Name:           python-suse-cloud-image-name-parser
-Version:        0.0.3
+Version:        0.1.0
 Release:        0
 Summary:        Parses SUSE cloud image names
 License:        Apache-2.0
