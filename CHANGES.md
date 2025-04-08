@@ -1,3 +1,10 @@
+v0.1.0 (2025-04-08)
+======
+
+- Drop cloud specifics from parser.
+- Only drop generation id if it exists.
+- Fix generation id regex pattern
+
 v0.0.3 (2025-04-02)
 ======
 
