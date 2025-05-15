@@ -15,8 +15,12 @@
 # Please submit bugfixes or comments via https://bugs.opensuse.org/
 #
 %define upstream_name suse-cloud-image-name-parser
+%if 0%{?suse_version} >= 1600
+%define pythons %{primary_python}
+%else
 %{?sle15_python_module_pythons}
-
+%endif
+%global _sitelibdir %{%{pythons}_sitelib}
 
 Name:           python-suse-cloud-image-name-parser
 Version:        0.1.0
@@ -28,12 +32,10 @@ URL:            https://github.com/SUSE-Enceladus/suse-cloud-image-name-parser
 Source:         https://files.pythonhosted.org/packages/source/s/%{upstream_name}/%{upstream_name}-%{version}.tar.gz
 BuildRequires:  python-rpm-macros
 BuildRequires:  fdupes
-BuildRequires:  %{python_module setuptools}
-BuildRequires:  %{python_module pip}
-BuildRequires:  %{python_module wheel}
+BuildRequires:  %{pythons}-setuptools
+BuildRequires:  %{pythons}-pip
+BuildRequires:  %{pythons}-wheel
 BuildArch:      noarch
-
-%python_subpackages
 
 %description
 
@@ -45,13 +47,13 @@ BuildArch:      noarch
 
 %install
 %pyproject_install
-%{python_expand %fdupes %{buildroot}%{$python_sitelib}}
+%python_expand %fdupes %{buildroot}%{_sitelibdir}
 
 %check
 
-%files %{python_files}
+%files
 %defattr(-,root,root)
 %doc README.md CHANGES.md
-%{python_sitelib}/*
+%{_sitelibdir}/*
 
 %changelog
