@@ -1,3 +1,8 @@
+v0.2.0 (2025-05-16)
+======
+
+- Build for only one version of python
+
 v0.1.0 (2025-04-08)
 ======
 
