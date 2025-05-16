@@ -47,7 +47,7 @@ BuildArch:      noarch
 
 %install
 %pyproject_install
-%python_expand %fdupes %{buildroot}%{_sitelibdir}
+%fdupes %{buildroot}%{_sitelibdir}
 
 %check
 
