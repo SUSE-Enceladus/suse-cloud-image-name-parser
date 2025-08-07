@@ -529,8 +529,12 @@ class SUSECloudImageName:  # pylint: disable=R0904
         if self.is_sap:
             return 'SLES-SAP'
         if self.is_suma and self.suma_type == 'server':
+            if float(self.product_version) >= 5.1:
+                return 'multi-linux-manager'
             return 'SUSE-MANAGER'
         if self.is_suma and self.suma_type == 'proxy':
+            if float(self.product_version) >= 5.1:
+                return 'multi-linux-manager-proxy'
             return 'SUSE-MANAGER-PROXY'
         if self.is_leap:
             return 'OPENSUSE-LEAP'
