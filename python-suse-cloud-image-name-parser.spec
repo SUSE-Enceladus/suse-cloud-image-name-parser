@@ -23,7 +23,7 @@
 %global _sitelibdir %{%{pythons}_sitelib}
 
 Name:           python-suse-cloud-image-name-parser
-Version:        0.2.1
+Version:        0.2.2
 Release:        0
 Summary:        Parses SUSE cloud image names
 License:        Apache-2.0
