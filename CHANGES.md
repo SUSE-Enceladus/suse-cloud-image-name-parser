@@ -1,3 +1,9 @@
+v0.3.0 (2025-08-26)
+======
+
+- For an openSUSE Leap fragment return False for both payg and byos options
+- Use period for product version of SLES >= 16.0
+
 v0.2.2 (2025-08-07)
 ======
 
