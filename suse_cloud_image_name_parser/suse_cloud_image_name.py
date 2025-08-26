@@ -182,11 +182,17 @@ class SUSECloudImageName:  # pylint: disable=R0904
     @property
     def is_byos(self):
         """Check if 'byos' is set"""
+        if self.is_leap:
+            return False
+
         return self.byos is not None
 
     @property
     def is_payg(self):
         """Check if 'byos' is not set"""
+        if self.is_leap:
+            return False
+
         return self.byos is None
 
     @property
