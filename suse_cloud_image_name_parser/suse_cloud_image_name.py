@@ -196,6 +196,16 @@ class SUSECloudImageName:  # pylint: disable=R0904
         return self.byos is None
 
     @property
+    def tomcat(self):
+        """Get the value of the 'tomcat' regex match"""
+        return self._image_info['tomcat']
+
+    @property
+    def is_tomcat(self):
+        """Check if 'tomcat' is set"""
+        return self.tomcat is not None
+
+    @property
     def basic(self):
         """Get the value of the 'basic' regex match"""
         return self._image_info['basic']
