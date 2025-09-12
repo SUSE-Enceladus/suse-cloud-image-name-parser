@@ -254,16 +254,17 @@ class SUSECloudImageName:  # pylint: disable=R0904
         version = []
         result = None
         version.append(self.product_major)
-        if any([
-            self.is_hpc,
-            self.is_sle_server and self.product_major_int <= 15
-        ]):
+        if (
+            (self.is_hpc or self.is_sle_server)
+            and self.product_major_int <= 15
+        ):
             joiner = '-'
         elif any([
             self.is_suma,
             self.is_leap,
             self.is_micro,
-            self.is_sle_server and self.product_major_int > 15
+            (self.is_hpc or self.is_sle_server)
+            and self.product_major_int > 15
         ]):
             joiner = '.'
 
