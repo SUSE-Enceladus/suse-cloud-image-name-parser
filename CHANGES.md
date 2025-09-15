@@ -1,3 +1,8 @@
+v0.4.0 (2025-09-15)
+======
+
+- Adds the 'tomcat' segment for the new images with tomcat installed.
+
 v0.3.0 (2025-08-26)
 ======
 
