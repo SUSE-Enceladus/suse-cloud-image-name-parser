@@ -1,4 +1,4 @@
-v0.4.0 (2025-09-30)
+v0.5.0 (2025-09-30)
 ======
 
 - Adds the new tomcat segment for tomcat images
