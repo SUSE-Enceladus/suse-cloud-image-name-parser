@@ -60,6 +60,9 @@ class SUSECloudImageNameRegexp:
     hpc2 = r'(?:-(?P<hpc2>hpc))?'
     hardened = r'(?:-(?P<hardened>hardened))?'
     tomcat = r'(?:-(?P<tomcat>tomcat))?'
+    php = r'(?:-(?P<php>php))?'
+    postgresql = r'(?:-(?P<postgresql>postgresql))?'
+    mariadb = r'(?:-(?P<mariadb>mariadb))?'
     datestamp = r'(?:-v(?P<datestamp>[0-9]{8,9}))?'
     ecs = r'(?:-(?P<ecs>ecs))?'
     gen_id = (r'(?:-(?P<gen_id>(?:(?P=major_version)' +
@@ -118,6 +121,9 @@ class SUSECloudImageNameRegexp:
                             cls.azure_hosted +
                             cls.byos +
                             cls.tomcat +
+                            cls.php +
+                            cls.postgresql +
+                            cls.mariadb +
                             cls.basename_post)
 
         # Construct a pattern that matches the possible suffix
