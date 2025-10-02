@@ -206,6 +206,36 @@ class SUSECloudImageName:  # pylint: disable=R0904
         return self.tomcat is not None
 
     @property
+    def php(self):
+        """Get the value of the 'php' regex match"""
+        return self._image_info['php']
+
+    @property
+    def is_php(self):
+        """Check if 'php' is set"""
+        return self.php is not None
+
+    @property
+    def postgresql(self):
+        """Get the value of the 'postgresql' regex match"""
+        return self._image_info['postgresql']
+
+    @property
+    def is_postgresql(self):
+        """Check if 'postgresql' is set"""
+        return self.postgresql is not None
+
+    @property
+    def mariadb(self):
+        """Get the value of the 'mariadb' regex match"""
+        return self._image_info['mariadb']
+
+    @property
+    def is_mariadb(self):
+        """Check if 'mariadb' is set"""
+        return self.mariadb is not None
+
+    @property
     def basic(self):
         """Get the value of the 'basic' regex match"""
         return self._image_info['basic']
