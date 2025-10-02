@@ -1,3 +1,8 @@
+v0.6.0 (2025-10-2)
+======
+
+- Adds the new segments for php, MariaDB and PostgreSQL images
+
 v0.5.0 (2025-09-30)
 ======
 
