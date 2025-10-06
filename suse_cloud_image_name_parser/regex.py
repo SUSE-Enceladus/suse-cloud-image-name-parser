@@ -89,7 +89,6 @@ class SUSECloudImageNameRegexp:
                             cls.opensuse_leap +
                             r'|' +
                             cls.suse_manager +
-                            r'|' +
                             cls.prodbase_post)
 
         # Construct a regexp pattern that matches the entire product
