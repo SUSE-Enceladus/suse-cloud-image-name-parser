@@ -40,7 +40,13 @@ class SUSECloudImageNameRegexp:
     sle_server = r'(?:(?:suse-)?(?P<sle_server>sles))'
     sle = r'(?:(?:suse-)?(?P<sle>sle))'
     opensuse_leap = r'(?:(?:suse-)?(?P<leap>open(suse|SUSE)-[l|L]eap))'
-    suse_manager = r'(?P<suse_manager>suse-manager)'
+    suse_manager = (
+        r'(?P<suse_manager>'
+        r'suse-manager|'
+        r'suse-multi-linux-mgr|'
+        r'suse-multi-linux-manager|'
+        r')'
+    )
     product_version = (r'(' +
                        r'(?:-?(?P<major_version>[0-9]+))?' +
                        r'(?:[.-](?P<minor_version>(?:[sS][pP][1-9]|[0-9])))?' +
