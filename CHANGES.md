@@ -1,3 +1,10 @@
+v0.7.0 (2025-10-16)
+======
+
+- Removes extra '|' in regex
+- Update regex to handle 5.1 MLM image name
+- Add MLM 5.2 to distro matrix for testing
+
 v0.6.0 (2025-10-2)
 ======
 
