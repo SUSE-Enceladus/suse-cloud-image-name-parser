@@ -355,7 +355,8 @@ class SUSECloudImageName:  # pylint: disable=R0904
         "4.2": "15-SP3",
         "4.3": "15-SP4",
         "5.0": "5.5",
-        "5.1": "6.1"
+        "5.1": "6.1",
+        "5.2": "6.2"
     }
     _MICRO_DISTRO = {
         # Keys should be the value of self.product_version
