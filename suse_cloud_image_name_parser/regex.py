@@ -44,7 +44,7 @@ class SUSECloudImageNameRegexp:
         r'(?P<suse_manager>'
         r'suse-manager|'
         r'suse-multi-linux-mgr|'
-        r'suse-multi-linux-manager|'
+        r'suse-multi-linux-manager'
         r')'
     )
     product_version = (r'(' +
