@@ -37,7 +37,7 @@ with open('requirements-dev.txt') as req_file:
 
 setup(
     name='suse-cloud-image-name-parser',
-    version='0.6.0',
+    version='0.7.0',
     description="Package for SUSE image name data.",
     long_description=readme,
     long_description_content_type="text/markdown",
