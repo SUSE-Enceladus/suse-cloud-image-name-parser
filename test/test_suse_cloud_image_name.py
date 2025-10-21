@@ -9,7 +9,7 @@ class TestSUSECloudImageName(object):
 
         test_cases = [
             (
-                "021d1b90c82943ec959408cff8e26c37__suse-manager-server-5-0-byos-v20250729-x86_64",
+                "021d1b90c82943ec959408cff8e26c37__suse-manager-server-5-0-byos-v20250729-x86_64",  # NOQA
                 {
                     'is_x86_64': True,
                     'is_aarch64': False,
@@ -38,7 +38,8 @@ class TestSUSECloudImageName(object):
                     'is_micro': False,
                     'is_ssd': False,
                     'is_ltd': None,
-                    'is_llc': None
+                    'is_llc': None,
+                    'is_containerized': False
                 }
             ),
             (
@@ -71,7 +72,8 @@ class TestSUSECloudImageName(object):
                     'is_micro': False,
                     'is_ssd': True,
                     'is_ltd': None,
-                    'is_llc': None
+                    'is_llc': None,
+                    'is_containerized': False
                 }
             ),
             (
@@ -104,7 +106,8 @@ class TestSUSECloudImageName(object):
                     'is_micro': True,
                     'is_ssd': True,
                     'is_ltd': True,
-                    'is_llc': False
+                    'is_llc': False,
+                    'is_containerized': False
                 }
             ),
             (
@@ -137,7 +140,8 @@ class TestSUSECloudImageName(object):
                     'is_micro': False,
                     'is_ssd': True,
                     'is_ltd': None,
-                    'is_llc': None
+                    'is_llc': None,
+                    'is_containerized': False
                 }
             ),
             (
@@ -170,7 +174,8 @@ class TestSUSECloudImageName(object):
                     'is_micro': False,
                     'is_ssd': True,
                     'is_ltd': None,
-                    'is_llc': None
+                    'is_llc': None,
+                    'is_containerized': False
                 }
             ),
             (
@@ -203,7 +208,8 @@ class TestSUSECloudImageName(object):
                     'is_micro': False,
                     'is_ssd': True,
                     'is_ltd': False,
-                    'is_llc': True
+                    'is_llc': True,
+                    'is_containerized': False
                 }
             ),
             (
@@ -236,7 +242,8 @@ class TestSUSECloudImageName(object):
                     'is_micro': False,
                     'is_ssd': True,
                     'is_ltd': False,
-                    'is_llc': True
+                    'is_llc': True,
+                    'is_containerized': False
                 }
             ),
             (
@@ -269,7 +276,8 @@ class TestSUSECloudImageName(object):
                     'is_micro': False,
                     'is_ssd': True,
                     'is_ltd': False,
-                    'is_llc': True
+                    'is_llc': True,
+                    'is_containerized': False
                 }
             ),
             (
@@ -302,7 +310,42 @@ class TestSUSECloudImageName(object):
                     'is_micro': False,
                     'is_ssd': True,
                     'is_ltd': False,
-                    'is_llc': True
+                    'is_llc': True,
+                    'is_containerized': False
+                }
+            ),
+            (
+                "suse-manager-proxy-5-1-byos-v20250917-hvm-ssd-arm64",
+                {
+                    'is_x86_64': False,
+                    'is_aarch64': True,
+                    'is_arm64': True,
+                    'is_amd64': False,
+                    'is_leap': False,
+                    'is_sle_server': False,
+                    'is_sle': False,
+                    'is_suma': True,
+                    'suma_type': 'proxy',
+                    'is_sap': False,
+                    'is_byos': True,
+                    'is_payg': False,
+                    'is_tomcat': False,
+                    'is_postgresql': False,
+                    'is_php': False,
+                    'is_mariadb': False,
+                    'is_basic': False,
+                    'product_major_int': 5,
+                    'product_minor_int': 1,
+                    'product_version': '5.1',
+                    'distro_version': '6.1',
+                    'has_uuid_prefix': False,
+                    'is_chost': False,
+                    'is_hardened': False,
+                    'is_micro': False,
+                    'is_ssd': True,
+                    'is_ltd': None,
+                    'is_llc': None,
+                    'is_containerized': True
                 }
             ),
         ]

@@ -618,6 +618,10 @@ class SUSECloudImageName:  # pylint: disable=R0904
             return "opensuse.leap." + self.distro_version_string
 
         if self.is_suma:
+            if self.product_version == '5.1':
+                # The MLM 5.1 software runs as containers on a Micro 6.1 host
+                #  base. Using the base for cve scanning these images.
+                return "suse.linux.enterprise.micro.6.1"
             return "suse.manager." + self.product_version
 
         if self.is_micro:
@@ -635,3 +639,13 @@ class SUSECloudImageName:  # pylint: disable=R0904
         raise UndefinedOvalProductError(
             f'Unable to find matching oval_product for {self._image_name}'
         )
+
+    @property
+    def is_containerized(self):
+        """
+        Boolean flag that indicates if the image includes software as
+        containers or not
+        """
+        if self.is_suma and self.product_version == "5.1":
+            return True
+        return False
