@@ -39,7 +39,7 @@ class TestSUSECloudImageName(object):
                     'is_ssd': False,
                     'is_ltd': None,
                     'is_llc': None,
-                    'is_containerized': False
+                    'is_containerized': True
                 }
             ),
             (

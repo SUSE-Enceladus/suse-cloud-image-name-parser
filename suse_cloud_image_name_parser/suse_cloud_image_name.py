@@ -618,10 +618,13 @@ class SUSECloudImageName:  # pylint: disable=R0904
             return "opensuse.leap." + self.distro_version_string
 
         if self.is_suma:
-            if self.product_version == '5.1':
-                # The MLM 5.1 software runs as containers on a Micro 6.1 host
+            if self.product_version == '5.0':
+                # The MLM 5.0 software runs as containers on a Micro 5.5 host
                 #  base. Using the base for cve scanning these images.
-                return "suse.linux.enterprise.micro.6.1"
+                return "suse.linux.enterprise.micro.5.5"
+            elif self.product_version == '5.1':
+                # The MLM 5.1 software runs as containers on a Micro 6.1 base.
+                return "suse.linux.micro.6.1"
             return "suse.manager." + self.product_version
 
         if self.is_micro:
@@ -646,6 +649,6 @@ class SUSECloudImageName:  # pylint: disable=R0904
         Boolean flag that indicates if the image includes software as
         containers or not
         """
-        if self.is_suma and self.product_version == "5.1":
+        if self.is_suma and float(self.product_version) >= 5.0:
             return True
         return False
