@@ -1,3 +1,9 @@
+v0.8.0 (2025-10-21)
+======
+
+- Modifies oval infor for MLM 5.1
+- adds new `is_containerized` flag
+
 v0.7.0 (2025-10-16)
 ======
 
