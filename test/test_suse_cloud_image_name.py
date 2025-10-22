@@ -1,3 +1,5 @@
+import datetime
+
 from suse_cloud_image_name_parser.suse_cloud_image_name import (
     SUSECloudImageName
 )
@@ -39,7 +41,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': False,
                     'is_ltd': None,
                     'is_llc': None,
-                    'is_containerized': True
+                    'is_containerized': True,
+                    'created_at': datetime.datetime(2025, 7, 29)
                 }
             ),
             (
@@ -73,7 +76,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': None,
                     'is_llc': None,
-                    'is_containerized': False
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 6, 19)
                 }
             ),
             (
@@ -107,7 +111,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': True,
                     'is_llc': False,
-                    'is_containerized': False
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 7, 24)
                 }
             ),
             (
@@ -141,7 +146,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': None,
                     'is_llc': None,
-                    'is_containerized': False
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 7, 25)
                 }
             ),
             (
@@ -175,7 +181,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': None,
                     'is_llc': None,
-                    'is_containerized': False
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 7, 25)
                 }
             ),
             (
@@ -209,7 +216,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': False,
                     'is_llc': True,
-                    'is_containerized': False
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 1, 1)
                 }
             ),
             (
@@ -243,7 +251,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': False,
                     'is_llc': True,
-                    'is_containerized': False
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 1, 1)
                 }
             ),
             (
@@ -277,7 +286,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': False,
                     'is_llc': True,
-                    'is_containerized': False
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 1, 1)
                 }
             ),
             (
@@ -311,7 +321,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': False,
                     'is_llc': True,
-                    'is_containerized': False
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 1, 1)
                 }
             ),
             (
@@ -345,7 +356,8 @@ class TestSUSECloudImageName(object):
                     'is_ssd': True,
                     'is_ltd': None,
                     'is_llc': None,
-                    'is_containerized': True
+                    'is_containerized': True,
+                    'created_at': datetime.datetime(2025, 9, 17)
                 }
             ),
         ]
