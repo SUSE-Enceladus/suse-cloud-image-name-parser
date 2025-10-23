@@ -69,7 +69,7 @@ class SUSECloudImageNameRegexp:
     php = r'(?:-(?P<php>php))?'
     postgresql = r'(?:-(?P<postgresql>postgresql))?'
     mariadb = r'(?:-(?P<mariadb>mariadb))?'
-    datestamp = r'(?:-v(?P<datestamp>[0-9]{8,9}))?'
+    datestamp = r'(?:-v(?P<datestamp>[0-9]{8}))?'
     ecs = r'(?:-(?P<ecs>ecs))?'
     gen_id = (r'(?:-(?P<gen_id>(?:(?P=major_version)' +
               r'(?:-(?P=minor_version))?-)?gen[0-9]))?')

@@ -16,6 +16,7 @@
 # along with image-name.
 # If not, see <http://www.gnu.org/licenses/>.
 
+import datetime
 import logging
 
 from suse_cloud_image_name_parser.regex import SUSECloudImageNameRegexp
@@ -435,6 +436,13 @@ class SUSECloudImageName:  # pylint: disable=R0904
     def datestamp(self):
         """Get the value of the 'datestamp' regex match"""
         return self._image_info['datestamp']
+
+    @property
+    def created_at(self):
+        """Get the value of the 'datestamp' as a datetime object"""
+        if self.datestamp:
+            return datetime.datetime.strptime(self.datestamp, "%Y%m%d")
+        return None
 
     @property
     def unique_name(self):
