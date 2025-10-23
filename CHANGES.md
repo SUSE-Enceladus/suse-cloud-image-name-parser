@@ -1,3 +1,9 @@
+v0.9.0 (2025-10-23)
+======
+
+- Includes the `created_at` property to SUSECloudImageName
+- Removes regex support for datestamps with extra digits
+
 v0.8.1 (2025-10-22)
 ======
 
