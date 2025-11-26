@@ -42,7 +42,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': None,
                     'is_llc': None,
                     'is_containerized': True,
-                    'created_at': datetime.datetime(2025, 7, 29)
+                    'created_at': datetime.datetime(2025, 7, 29),
+                    'oval_product': 'suse.linux.enterprise.micro.5.5'
                 }
             ),
             (
@@ -77,7 +78,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': None,
                     'is_llc': None,
                     'is_containerized': False,
-                    'created_at': datetime.datetime(2025, 6, 19)
+                    'created_at': datetime.datetime(2025, 6, 19),
+                    'oval_product': 'suse.linux.enterprise.15'
                 }
             ),
             (
@@ -112,7 +114,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': True,
                     'is_llc': False,
                     'is_containerized': False,
-                    'created_at': datetime.datetime(2025, 7, 24)
+                    'created_at': datetime.datetime(2025, 7, 24),
+                    'oval_product': 'suse.linux.enterprise.micro.5.3'
                 }
             ),
             (
@@ -147,7 +150,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': None,
                     'is_llc': None,
                     'is_containerized': False,
-                    'created_at': datetime.datetime(2025, 7, 25)
+                    'created_at': datetime.datetime(2025, 7, 25),
+                    'oval_product': 'suse.linux.enterprise.16'
                 }
             ),
             (
@@ -182,7 +186,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': None,
                     'is_llc': None,
                     'is_containerized': False,
-                    'created_at': datetime.datetime(2025, 7, 25)
+                    'created_at': datetime.datetime(2025, 7, 25),
+                    'oval_product': 'opensuse.leap.15.6'
                 }
             ),
             (
@@ -217,7 +222,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': False,
                     'is_llc': True,
                     'is_containerized': False,
-                    'created_at': datetime.datetime(2025, 1, 1)
+                    'created_at': datetime.datetime(2025, 1, 1),
+                    'oval_product': 'suse.linux.enterprise.16'
                 }
             ),
             (
@@ -252,7 +258,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': False,
                     'is_llc': True,
                     'is_containerized': False,
-                    'created_at': datetime.datetime(2025, 1, 1)
+                    'created_at': datetime.datetime(2025, 1, 1),
+                    'oval_product': 'suse.linux.enterprise.16'
                 }
             ),
             (
@@ -287,7 +294,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': False,
                     'is_llc': True,
                     'is_containerized': False,
-                    'created_at': datetime.datetime(2025, 1, 1)
+                    'created_at': datetime.datetime(2025, 1, 1),
+                    'oval_product': 'suse.linux.enterprise.16'
                 }
             ),
             (
@@ -322,7 +330,8 @@ class TestSUSECloudImageName(object):
                     'is_ltd': False,
                     'is_llc': True,
                     'is_containerized': False,
-                    'created_at': datetime.datetime(2025, 1, 1)
+                    'created_at': datetime.datetime(2025, 1, 1),
+                    'oval_product': 'suse.linux.enterprise.16'
                 }
             ),
             (
@@ -357,7 +366,45 @@ class TestSUSECloudImageName(object):
                     'is_ltd': None,
                     'is_llc': None,
                     'is_containerized': True,
-                    'created_at': datetime.datetime(2025, 9, 17)
+                    'created_at': datetime.datetime(2025, 9, 17),
+                    'oval_product': 'suse.linux.micro.6.1'
+                }
+            ),
+            (
+                "suse-manager-server-5-2-byos-v20250917-hvm-ssd-x86-64",
+                {
+                    'is_x86_64': True,
+                    'is_aarch64': False,
+                    'is_arm64': False,
+                    'is_amd64': True,
+                    'is_leap': False,
+                    'is_sle_server': False,
+                    'is_sle': False,
+                    'is_suma': True,
+                    'suma_type': 'server',
+                    'is_sap': False,
+                    'is_byos': True,
+                    'is_payg': False,
+                    'is_tomcat': False,
+                    'is_postgresql': False,
+                    'is_php': False,
+                    'is_mariadb': False,
+                    'is_basic': False,
+                    'product_major_int': 5,
+                    'product_minor_int': 2,
+                    'product_version': '5.2',
+                    'distro_version': '15-SP7',
+                    'has_uuid_prefix': False,
+                    'is_chost': False,
+                    'is_hardened': False,
+                    'is_micro': False,
+                    'is_ssd': True,
+                    'is_ltd': None,
+                    'is_llc': None,
+                    'is_containerized': True,
+                    'created_at': datetime.datetime(2025, 9, 17),
+                    'oval_product': 'suse.linux.enterprise.15-sp7',
+                    'cloud_arch': 'x86_64'
                 }
             ),
         ]
