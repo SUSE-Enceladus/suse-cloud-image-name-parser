@@ -357,7 +357,7 @@ class SUSECloudImageName:  # pylint: disable=R0904
         "4.3": "15-SP4",
         "5.0": "5.5",
         "5.1": "6.1",
-        "5.2": "6.2"
+        "5.2": "15-SP7"
     }
     _MICRO_DISTRO = {
         # Keys should be the value of self.product_version
@@ -633,6 +633,8 @@ class SUSECloudImageName:  # pylint: disable=R0904
             elif self.product_version == '5.1':
                 # The MLM 5.1 software runs as containers on a Micro 6.1 base.
                 return "suse.linux.micro.6.1"
+            elif float(self.product_version) >= 5.2:
+                return "suse.linux.enterprise." + self.distro_version_lower
             return "suse.manager." + self.product_version
 
         if self.is_micro:
