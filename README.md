@@ -12,12 +12,12 @@ The parser's functionality can be extended with plugins. This allows you to add
 ### How to Create a Plugin
 
 1. Create a Python file: Add a new .py file inside the
-   suse_cloud_image_name_parser/plugins/ directory. The plugin loader will
+   `suse_cloud_image_name_parser/plugins/` directory. The plugin loader will
    automatically discover it when the SUSECloudImageName is instantiated.
 
-2. Define a Property Function: Write a function that takes one argument: an
- instance of the SUSECloudImageName class. This function will contain the logic
-  for your new property.
+2. Define a Property Function: Write a function in that file that takes one
+   argument: an instance of the SUSECloudImageName class. This function will
+    contain the logic for your new property.
 
 3. Register the Property: Decorate your function with the `@register_property`
  decorator from the `suse_cloud_image_name_parser/plugins_loader.py` file. The
