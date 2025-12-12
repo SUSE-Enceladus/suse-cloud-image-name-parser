@@ -662,3 +662,55 @@ class SUSECloudImageName:  # pylint: disable=R0904
         if self.is_suma and float(self.product_version) >= 5.0:
             return True
         return False
+
+    @property
+    def aimaas_product(self):
+        """
+        The product string used in the aimaas API for this image
+        """
+        # openSUSE
+        if self.is_leap:
+            return f'opensuse-leap-{self.product_major}.{self.product_minor}'
+
+        # MLM
+        if self.is_suma:
+            product_version = float(self.product_version)
+            if product_version < 5.0:
+                return (
+                    f'suse-suse-manager-{self.suma_type}-'
+                    f'{self.product_major}-{self.product_minor}'
+                )
+            elif product_version == 5.0:
+                return (
+                    f'suse-manager-{self.suma_type}-extension-'
+                    f'{self.product_major}.{self.product_minor}'
+                )
+            else:
+                return (
+                    f'suse-multi-linux-manager-{self.suma_type}-extension-'
+                    f'{self.product_major}.{self.product_minor}'
+                )
+
+        # Micro
+        if self.is_micro:
+            product_version = float(self.product_version)
+            if product_version < 6.0:
+                return f'suse-micro-{self.product_major}.{self.product_minor}'
+            else:
+                return f'sl-micro-{self.product_major}.{self.product_minor}'
+
+        # SLES4SAP
+        if self.is_sap:
+            if self.major_version == '12':
+                return (
+                    'suse-linux-enterprise-server-for-sap-applications-'
+                    f'{self.product_major}-{self.product_minor}'
+                )
+            else:
+                return (
+                    f'suse-sles-sap-{self.product_major}-{self.product_minor}'
+                )
+
+        # Rest of the cases follow SLES lifecycle
+        if self.has_product_version:
+            return f'suse-sles-{self.product_major}-{self.product_minor}'
