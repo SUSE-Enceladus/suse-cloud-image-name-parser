@@ -18,6 +18,7 @@
 
 import datetime
 import logging
+import threading
 
 from suse_cloud_image_name_parser.regex import SUSECloudImageNameRegexp
 from suse_cloud_image_name_parser.errors import (
@@ -25,8 +26,12 @@ from suse_cloud_image_name_parser.errors import (
     UndefinedOvalProductError,
     UndefinedProductMajorError
 )
+from suse_cloud_image_name_parser.plugins_loader import load_plugins
+
 
 _logger = logging.getLogger(__name__)
+_plugin_lock = threading.Lock()
+_plugins_loaded = False
 
 
 class SUSECloudImageName:  # pylint: disable=R0904
@@ -41,6 +46,13 @@ class SUSECloudImageName:  # pylint: disable=R0904
     class method.
     """
 
+    def __init_plugins(self):
+        global _plugins_loaded
+        with _plugin_lock:
+            if not _plugins_loaded:
+                load_plugins(self.__class__)
+                _plugins_loaded = True
+
     def __init__(self, name):
         self._image_name = name
 
@@ -51,6 +63,8 @@ class SUSECloudImageName:  # pylint: disable=R0904
             raise BadRegexMatchError(
                 f"Could not match regex for image: {self._image_name}"
             ) from None
+
+        self.__init_plugins()
 
         _logger.debug(
             "Image match values for image %s are: %s",
