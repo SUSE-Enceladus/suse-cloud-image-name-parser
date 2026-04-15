@@ -1,3 +1,9 @@
+v0.10.0 (2026-04-15)
+======
+
+- Includes the oval_product for MLM 5.2
+- Fixes the short_name attribute used to generate release_notes URLs
+
 v0.9.0 (2025-10-23)
 ======
 
