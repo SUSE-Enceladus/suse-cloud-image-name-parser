@@ -43,7 +43,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': None,
                     'is_containerized': True,
                     'created_at': datetime.datetime(2025, 7, 29),
-                    'oval_product': 'suse.linux.enterprise.micro.5.5'
+                    'oval_product': 'suse.linux.enterprise.micro.5.5',
+                    'short_name': 'suma'
                 }
             ),
             (
@@ -79,7 +80,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': None,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 6, 19),
-                    'oval_product': 'suse.linux.enterprise.15'
+                    'oval_product': 'suse.linux.enterprise.15',
+                    'short_name': 'sles'
                 }
             ),
             (
@@ -115,7 +117,45 @@ class TestSUSECloudImageName(object):
                     'is_llc': False,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 24),
-                    'oval_product': 'suse.linux.enterprise.micro.5.3'
+                    'oval_product': 'suse.linux.enterprise.micro.5.3',
+                    'short_name': 'SLE-Micro'
+                }
+            ),
+            (
+                "suse-sle-micro-6-0-v20250724-hvm-ssd-arm64-ltd",
+                {
+                    'is_x86_64': False,
+                    'is_aarch64': True,
+                    'is_arm64': True,
+                    'is_amd64': False,
+                    'is_leap': False,
+                    'is_sle_server': False,
+                    'is_sle': True,
+                    'is_suma': False,
+                    'suma_type': None,
+                    'is_sap': False,
+                    'is_byos': False,
+                    'is_payg': True,
+                    'is_tomcat': False,
+                    'is_postgresql': False,
+                    'is_php': False,
+                    'is_mariadb': False,
+                    'is_basic': False,
+                    'product_major_int': 6,
+                    'product_minor_int': 0,
+                    'product_version': '6.0',
+                    'distro_version': 'SL-Framework-One',
+                    'has_uuid_prefix': False,
+                    'is_chost': False,
+                    'is_hardened': False,
+                    'is_micro': True,
+                    'is_ssd': True,
+                    'is_ltd': True,
+                    'is_llc': False,
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 7, 24),
+                    'oval_product': 'suse.linux.micro.6.0',
+                    'short_name': 'SL-Micro'
                 }
             ),
             (
@@ -151,7 +191,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': None,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 25),
-                    'oval_product': 'suse.linux.enterprise.16'
+                    'oval_product': 'suse.linux.enterprise.16',
+                    'short_name': 'sles'
                 }
             ),
             (
@@ -187,7 +228,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': None,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 25),
-                    'oval_product': 'opensuse.leap.15.6'
+                    'oval_product': 'opensuse.leap.15.6',
+                    'short_name': 'OPENSUSE-LEAP'
                 }
             ),
             (
@@ -223,7 +265,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': True,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 1, 1),
-                    'oval_product': 'suse.linux.enterprise.16'
+                    'oval_product': 'suse.linux.enterprise.16',
+                    'short_name': 'sles'
                 }
             ),
             (
@@ -259,7 +302,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': True,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 1, 1),
-                    'oval_product': 'suse.linux.enterprise.16'
+                    'oval_product': 'suse.linux.enterprise.16',
+                    'short_name': 'sles'
                 }
             ),
             (
@@ -295,7 +339,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': True,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 1, 1),
-                    'oval_product': 'suse.linux.enterprise.16'
+                    'oval_product': 'suse.linux.enterprise.16',
+                    'short_name': 'sles'
                 }
             ),
             (
@@ -331,7 +376,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': True,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 1, 1),
-                    'oval_product': 'suse.linux.enterprise.16'
+                    'oval_product': 'suse.linux.enterprise.16',
+                    'short_name': 'sles'
                 }
             ),
             (
@@ -367,7 +413,8 @@ class TestSUSECloudImageName(object):
                     'is_llc': None,
                     'is_containerized': True,
                     'created_at': datetime.datetime(2025, 9, 17),
-                    'oval_product': 'suse.linux.micro.6.1'
+                    'oval_product': 'suse.linux.micro.6.1',
+                    'short_name': 'multi-linux-manager-proxy'
                 }
             ),
             (
@@ -404,7 +451,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': True,
                     'created_at': datetime.datetime(2025, 9, 17),
                     'oval_product': 'suse.linux.enterprise.15-sp7',
-                    'cloud_arch': 'x86_64'
+                    'cloud_arch': 'x86_64',
+                    'short_name': 'multi-linux-manager'
                 }
             ),
         ]

@@ -584,25 +584,25 @@ class SUSECloudImageName:  # pylint: disable=R0904
     def short_name(self):
         """Get short name used for release notes"""
         if self.is_micro:
-            if float(self.product_version) >= 6.2:
+            if float(self.product_version) >= 6.0:
                 return 'SL-Micro'
             return 'SLE-Micro'
         if self.is_hpc:
-            return 'SL-HPC'
+            return 'sle-hpc'
         if self.is_sap:
-            return 'SLES-SAP'
+            return 'sles-sap'
         if self.is_suma and self.suma_type == 'server':
             if float(self.product_version) >= 5.1:
                 return 'multi-linux-manager'
-            return 'SUSE-MANAGER'
+            return 'suma'
         if self.is_suma and self.suma_type == 'proxy':
             if float(self.product_version) >= 5.1:
                 return 'multi-linux-manager-proxy'
-            return 'SUSE-MANAGER-PROXY'
+            return 'suma-proxy'
         if self.is_leap:
             return 'OPENSUSE-LEAP'
 
-        return 'SUSE-SLES'
+        return 'sles'
 
     @property
     def mp_account(self):
