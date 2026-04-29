@@ -44,7 +44,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': True,
                     'created_at': datetime.datetime(2025, 7, 29),
                     'oval_product': 'suse.linux.enterprise.micro.5.5',
-                    'short_name': 'suma'
+                    'short_name': 'suma',
+                    'is_sles_plus_foo': False,
                 }
             ),
             (
@@ -81,7 +82,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 6, 19),
                     'oval_product': 'suse.linux.enterprise.15',
-                    'short_name': 'sles'
+                    'short_name': 'sles',
+                    'is_sles_plus_foo': False,
                 }
             ),
             (
@@ -118,7 +120,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 24),
                     'oval_product': 'suse.linux.enterprise.micro.5.3',
-                    'short_name': 'SLE-Micro'
+                    'short_name': 'SLE-Micro',
+                    'is_sles_plus_foo': False,
                 }
             ),
             (
@@ -155,7 +158,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 24),
                     'oval_product': 'suse.linux.micro.6.0',
-                    'short_name': 'SL-Micro'
+                    'short_name': 'SL-Micro',
+                    'is_sles_plus_foo': False,
                 }
             ),
             (
@@ -192,7 +196,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 25),
                     'oval_product': 'suse.linux.enterprise.16',
-                    'short_name': 'sles'
+                    'short_name': 'sles',
+                    'is_sles_plus_foo': False,
                 }
             ),
             (
@@ -229,7 +234,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 25),
                     'oval_product': 'opensuse.leap.15.6',
-                    'short_name': 'OPENSUSE-LEAP'
+                    'short_name': 'OPENSUSE-LEAP',
+                    'is_sles_plus_foo': False,
                 }
             ),
             (
@@ -266,7 +272,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 1, 1),
                     'oval_product': 'suse.linux.enterprise.16',
-                    'short_name': 'sles'
+                    'short_name': 'sles',
+                    'is_sles_plus_foo': True,
                 }
             ),
             (
@@ -303,7 +310,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 1, 1),
                     'oval_product': 'suse.linux.enterprise.16',
-                    'short_name': 'sles'
+                    'short_name': 'sles',
+                    'is_sles_plus_foo': True,
                 }
             ),
             (
@@ -340,7 +348,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 1, 1),
                     'oval_product': 'suse.linux.enterprise.16',
-                    'short_name': 'sles'
+                    'short_name': 'sles',
+                    'is_sles_plus_foo': True,
                 }
             ),
             (
@@ -377,7 +386,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 1, 1),
                     'oval_product': 'suse.linux.enterprise.16',
-                    'short_name': 'sles'
+                    'short_name': 'sles',
+                    'is_sles_plus_foo': True,
                 }
             ),
             (
@@ -414,7 +424,8 @@ class TestSUSECloudImageName(object):
                     'is_containerized': True,
                     'created_at': datetime.datetime(2025, 9, 17),
                     'oval_product': 'suse.linux.micro.6.1',
-                    'short_name': 'multi-linux-manager-proxy'
+                    'short_name': 'multi-linux-manager-proxy',
+                    'is_sles_plus_foo': False,
                 }
             ),
             (
@@ -452,7 +463,8 @@ class TestSUSECloudImageName(object):
                     'created_at': datetime.datetime(2025, 9, 17),
                     'oval_product': 'suse.linux.enterprise.15-sp7',
                     'cloud_arch': 'x86_64',
-                    'short_name': 'multi-linux-manager'
+                    'short_name': 'multi-linux-manager',
+                    'is_sles_plus_foo': False,
                 }
             ),
         ]
