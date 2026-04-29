@@ -1,3 +1,8 @@
+v0.11.0 (2026-04-29)
+======
+
+- Implements a property that groups all SLES+FOO variants
+
 v0.10.0 (2026-04-15)
 ======
 
