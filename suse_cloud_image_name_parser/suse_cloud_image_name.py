@@ -232,6 +232,16 @@ class SUSECloudImageName:  # pylint: disable=R0904
         return self._image_info['mariadb']
 
     @property
+    def is_sles_plus_foo(self):
+        """Check if the image is SLES+FOO"""
+        return any([
+            self.is_tomcat,
+            self.is_php,
+            self.is_mariadb,
+            self.is_postgresql
+        ])
+
+    @property
     def is_mariadb(self):
         """Check if 'mariadb' is set"""
         return self.mariadb is not None
