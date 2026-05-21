@@ -672,3 +672,13 @@ class SUSECloudImageName:  # pylint: disable=R0904
         if self.is_suma and float(self.product_version) >= 5.0:
             return True
         return False
+
+    @property
+    def transup(self):
+        """Get the value of the 'transup' regex match"""
+        return self._image_info['transup']
+
+    @property
+    def is_transup(self):
+        """ Check if 'transup' is set"""
+        return self.transup is not None

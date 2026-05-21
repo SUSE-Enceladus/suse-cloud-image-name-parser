@@ -71,6 +71,7 @@ class SUSECloudImageNameRegexp:
     mariadb = r'(?:-(?P<mariadb>mariadb))?'
     datestamp = r'(?:-v(?P<datestamp>[0-9]{8}))?'
     ecs = r'(?:-(?P<ecs>ecs))?'
+    transup = r'(?:-(?P<transup>transup))?'
     gen_id = (r'(?:-(?P<gen_id>(?:(?P=major_version)' +
               r'(?:-(?P=minor_version))?-)?gen[0-9]))?')
     virt_type = r'(?:-(?P<virt_type>hvm|pv))?'
@@ -136,6 +137,7 @@ class SUSECloudImageNameRegexp:
         # image name.
         suffix_pattern = (cls.suffix_pre +
                           cls.ecs +
+                          cls.transup +
                           cls.virt_type +
                           cls.ssd +
                           cls.arch +

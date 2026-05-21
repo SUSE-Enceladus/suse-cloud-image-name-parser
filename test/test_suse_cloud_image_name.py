@@ -46,6 +46,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.enterprise.micro.5.5',
                     'short_name': 'suma',
                     'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -84,6 +86,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.enterprise.15',
                     'short_name': 'sles',
                     'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -122,6 +126,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.enterprise.micro.5.3',
                     'short_name': 'SLE-Micro',
                     'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -160,6 +166,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.micro.6.0',
                     'short_name': 'SL-Micro',
                     'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -198,6 +206,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.enterprise.16',
                     'short_name': 'sles',
                     'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -236,6 +246,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'opensuse.leap.15.6',
                     'short_name': 'OPENSUSE-LEAP',
                     'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -274,6 +286,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.enterprise.16',
                     'short_name': 'sles',
                     'is_sles_plus_foo': True,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -312,6 +326,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.enterprise.16',
                     'short_name': 'sles',
                     'is_sles_plus_foo': True,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -350,6 +366,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.enterprise.16',
                     'short_name': 'sles',
                     'is_sles_plus_foo': True,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -388,6 +406,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.enterprise.16',
                     'short_name': 'sles',
                     'is_sles_plus_foo': True,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -426,6 +446,8 @@ class TestSUSECloudImageName(object):
                     'oval_product': 'suse.linux.micro.6.1',
                     'short_name': 'multi-linux-manager-proxy',
                     'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None
                 }
             ),
             (
@@ -465,6 +487,88 @@ class TestSUSECloudImageName(object):
                     'cloud_arch': 'x86_64',
                     'short_name': 'multi-linux-manager',
                     'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None
+                }
+            ),
+            (
+                "suse-sle-micro-6-0-v20250724-transup-hvm-ssd-arm64-ltd",
+                {
+                    'is_x86_64': False,
+                    'is_aarch64': True,
+                    'is_arm64': True,
+                    'is_amd64': False,
+                    'is_leap': False,
+                    'is_sle_server': False,
+                    'is_sle': True,
+                    'is_suma': False,
+                    'suma_type': None,
+                    'is_sap': False,
+                    'is_byos': False,
+                    'is_payg': True,
+                    'is_tomcat': False,
+                    'is_postgresql': False,
+                    'is_php': False,
+                    'is_mariadb': False,
+                    'is_basic': False,
+                    'product_major_int': 6,
+                    'product_minor_int': 0,
+                    'product_version': '6.0',
+                    'distro_version': 'SL-Framework-One',
+                    'has_uuid_prefix': False,
+                    'is_chost': False,
+                    'is_hardened': False,
+                    'is_micro': True,
+                    'is_ssd': True,
+                    'is_ltd': True,
+                    'is_llc': False,
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 7, 24),
+                    'oval_product': 'suse.linux.micro.6.0',
+                    'short_name': 'SL-Micro',
+                    'is_sles_plus_foo': False,
+                    'is_transup': True,
+                    'transup': 'transup',
+                }
+            ),
+            (
+                "suse-sles-16-0-chost-byos-v20250725-transup-hvm-ssd-x86_64",
+                {
+                    'is_x86_64': True,
+                    'is_aarch64': False,
+                    'is_arm64': False,
+                    'is_amd64': True,
+                    'is_leap': False,
+                    'is_sle_server': True,
+                    'is_sle': False,
+                    'is_suma': False,
+                    'suma_type': None,
+                    'is_sap': False,
+                    'is_byos': True,
+                    'is_payg': False,
+                    'is_tomcat': False,
+                    'is_postgresql': False,
+                    'is_php': False,
+                    'is_mariadb': False,
+                    'is_basic': False,
+                    'product_major_int': 16,
+                    'product_minor_int': 0,
+                    'product_version': '16.0',
+                    'distro_version': '16.0',
+                    'has_uuid_prefix': False,
+                    'is_chost': True,
+                    'is_hardened': False,
+                    'is_micro': False,
+                    'is_ssd': True,
+                    'is_ltd': None,
+                    'is_llc': None,
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 7, 25),
+                    'oval_product': 'suse.linux.enterprise.16',
+                    'short_name': 'sles',
+                    'is_sles_plus_foo': False,
+                    'is_transup': True,
+                    'transup': 'transup',
                 }
             ),
         ]
