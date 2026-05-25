@@ -600,7 +600,10 @@ class SUSECloudImageName:  # pylint: disable=R0904
         if self.is_hpc:
             return 'sle-hpc'
         if self.is_sap:
-            return 'sles-sap'
+            if self.product_major_int > 15:
+                # sles-sap for 16.0 onwards
+                return 'sles-sap'
+            return 'SLE-SAP'
         if self.is_suma and self.suma_type == 'server':
             if float(self.product_version) >= 5.1:
                 return 'multi-linux-manager'
