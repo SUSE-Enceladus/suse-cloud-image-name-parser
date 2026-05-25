@@ -598,7 +598,7 @@ class SUSECloudImageName:  # pylint: disable=R0904
                 return 'SL-Micro'
             return 'SLE-Micro'
         if self.is_hpc:
-            return 'sle-hpc'
+            return 'SLE-HPC'
         if self.is_sap:
             if self.product_major_int > 15:
                 # sles-sap for 16.0 onwards
