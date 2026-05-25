@@ -1,3 +1,8 @@
+v0.12.0 (2026-05-25)
+======
+
+- Implements the transup flavor in the parser
+
 v0.11.0 (2026-04-29)
 ======
 
