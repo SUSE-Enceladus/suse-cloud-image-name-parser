@@ -615,7 +615,10 @@ class SUSECloudImageName:  # pylint: disable=R0904
         if self.is_leap:
             return 'OPENSUSE-LEAP'
 
-        return 'sles'
+        # SLES
+        if self.product_major_int > 15:
+            return 'sles'
+        return 'SUSE-SLES'
 
     @property
     def mp_account(self):
