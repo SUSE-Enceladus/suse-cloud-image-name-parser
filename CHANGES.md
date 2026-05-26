@@ -1,3 +1,8 @@
+v0.13.0 (2026-05-26)
+======
+
+- short_names changes for SLES for SAP release notes URLs
+
 v0.12.0 (2026-05-25)
 ======
 
