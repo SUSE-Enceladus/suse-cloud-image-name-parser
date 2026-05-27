@@ -84,7 +84,7 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 6, 19),
                     'oval_product': 'suse.linux.enterprise.15',
-                    'short_name': 'SUSE-SLES',
+                    'short_name': 'sles',
                     'is_sles_plus_foo': False,
                     'is_transup': False,
                     'transup': None
@@ -605,11 +605,11 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 25),
                     'oval_product': 'suse.linux.enterprise.15',
-                    'short_name': 'SUSE-SLES',
+                    'short_name': 'sles',
                     'is_sles_plus_foo': False,
                     'is_transup': False,
                     'transup': None,
-                    'short_name': 'SLE-SAP'
+                    'short_name': 'sles-sap'
                 }
             ),
             (
