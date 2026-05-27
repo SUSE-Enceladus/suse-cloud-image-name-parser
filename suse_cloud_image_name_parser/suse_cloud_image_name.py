@@ -594,9 +594,7 @@ class SUSECloudImageName:  # pylint: disable=R0904
     def short_name(self):
         """Get short name used for release notes"""
         if self.is_micro:
-            if float(self.product_version) >= 6.0:
-                return 'SL-Micro'
-            return 'SLE-Micro'
+            return 'sle-micro'
         if self.is_hpc:
             return 'sle-hpc'
         if self.is_sap:

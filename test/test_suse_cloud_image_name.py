@@ -124,7 +124,7 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 24),
                     'oval_product': 'suse.linux.enterprise.micro.5.3',
-                    'short_name': 'SLE-Micro',
+                    'short_name': 'sle-micro',
                     'is_sles_plus_foo': False,
                     'is_transup': False,
                     'transup': None
@@ -164,7 +164,7 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 24),
                     'oval_product': 'suse.linux.micro.6.0',
-                    'short_name': 'SL-Micro',
+                    'short_name': 'sle-micro',
                     'is_sles_plus_foo': False,
                     'is_transup': False,
                     'transup': None
@@ -525,7 +525,7 @@ class TestSUSECloudImageName(object):
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 24),
                     'oval_product': 'suse.linux.micro.6.0',
-                    'short_name': 'SL-Micro',
+                    'short_name': 'sle-micro',
                     'is_sles_plus_foo': False,
                     'is_transup': True,
                     'transup': 'transup',
