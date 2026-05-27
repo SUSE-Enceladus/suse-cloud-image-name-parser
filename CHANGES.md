@@ -1,3 +1,8 @@
+v0.13.1 (2026-05-27)
+======
+
+- Removes unnecesary changes in short_name
+
 v0.13.0 (2026-05-26)
 ======
 
