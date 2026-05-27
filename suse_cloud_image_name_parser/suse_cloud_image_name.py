@@ -598,12 +598,9 @@ class SUSECloudImageName:  # pylint: disable=R0904
                 return 'SL-Micro'
             return 'SLE-Micro'
         if self.is_hpc:
-            return 'SLE-HPC'
+            return 'sle-hpc'
         if self.is_sap:
-            if self.product_major_int > 15:
-                # sles-sap for 16.0 onwards
-                return 'sles-sap'
-            return 'SLE-SAP'
+            return 'sles-sap'
         if self.is_suma and self.suma_type == 'server':
             if float(self.product_version) >= 5.1:
                 return 'multi-linux-manager'
@@ -615,10 +612,7 @@ class SUSECloudImageName:  # pylint: disable=R0904
         if self.is_leap:
             return 'OPENSUSE-LEAP'
 
-        # SLES
-        if self.product_major_int > 15:
-            return 'sles'
-        return 'SUSE-SLES'
+        return 'sles'
 
     @property
     def mp_account(self):
