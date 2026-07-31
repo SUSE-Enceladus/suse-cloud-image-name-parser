@@ -45,6 +45,11 @@ class SUSECloudImageNameRegexp:
         r'suse-manager|'
         r'suse-multi-linux-mgr|'
         r'suse-multi-linux-manager'
+        r'|)'
+    )
+    suse_mls_ll = (
+        r'(?P<suse_mls_ll>'
+        r'suse-mls-ll'
         r')'
     )
     product_version = (r'(' +
@@ -96,6 +101,8 @@ class SUSECloudImageNameRegexp:
                             cls.opensuse_leap +
                             r'|' +
                             cls.suse_manager +
+                            r'|' +
+                            cls.suse_mls_ll +
                             cls.prodbase_post)
 
         # Construct a regexp pattern that matches the entire product

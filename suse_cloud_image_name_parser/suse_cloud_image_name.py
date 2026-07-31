@@ -141,6 +141,16 @@ class SUSECloudImageName:  # pylint: disable=R0904
         return self.suma is not None
 
     @property
+    def mls_ll(self):
+        """Get the value of the suse_mls_ll regex match"""
+        return self._image_info['suse_mls_ll']
+
+    @property
+    def is_mls_ll(self):
+        """Check if 'mls_ll' is set"""
+        return self.mls_ll is not None
+
+    @property
     def suma_type(self):
         """Get the value of the suma_type regex match"""
         return self._image_info['suma_type']
@@ -609,6 +619,8 @@ class SUSECloudImageName:  # pylint: disable=R0904
             return 'suma-proxy'
         if self.is_leap:
             return 'OPENSUSE-LEAP'
+        if self.is_mls_ll:
+            return 'multi-linux-support-liberty-linux'
 
         return 'sles'
 

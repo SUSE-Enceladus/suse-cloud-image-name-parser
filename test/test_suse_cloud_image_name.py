@@ -1,8 +1,10 @@
 import datetime
+import pytest
 
 from suse_cloud_image_name_parser.suse_cloud_image_name import (
     SUSECloudImageName
 )
+from suse_cloud_image_name_parser.errors import UndefinedOvalProductError
 
 
 class TestSUSECloudImageName(object):
@@ -653,9 +655,55 @@ class TestSUSECloudImageName(object):
                     'short_name': 'sles-sap'
                 }
             ),
+            (
+                "suse-mls-ll-8-byos-v20250724-hvm-ssd-x86_64",
+                {
+                    'is_x86_64': True,
+                    'is_aarch64': False,
+                    'is_arm64': False,
+                    'is_amd64': True,
+                    'is_leap': False,
+                    'is_sle_server': False,
+                    'is_sle': False,
+                    'is_suma': False,
+                    'suma_type': None,
+                    'is_sap': False,
+                    'is_byos': True,
+                    'is_payg': False,
+                    'is_tomcat': False,
+                    'is_postgresql': False,
+                    'is_php': False,
+                    'is_mariadb': False,
+                    'is_basic': False,
+                    'product_major_int': 8,
+                    'product_minor_int': 0,
+                    'product_version': '8',
+                    'distro_version': '8',
+                    'has_uuid_prefix': False,
+                    'is_chost': False,
+                    'is_hardened': False,
+                    'is_micro': False,
+                    'is_ssd': True,
+                    'is_ltd': None,
+                    'is_llc': None,
+                    'is_containerized': False,
+                    'created_at': datetime.datetime(2025, 7, 24),
+                    'oval_product': UndefinedOvalProductError,
+                    'short_name': 'multi-linux-support-liberty-linux',
+                    'is_sles_plus_foo': False,
+                    'is_transup': False,
+                    'transup': None,
+                    'is_mls_ll': True,
+                    'mls_ll': 'suse-mls-ll'
+                }
+            ),
         ]
 
         for (image, expected_result) in test_cases:
             image_name = SUSECloudImageName(image)
             for key, value in expected_result.items():
-                assert getattr(image_name, key) == value
+                if isinstance(value, type) and issubclass(value, Exception):
+                    with pytest.raises(value):
+                        getattr(image_name, key)
+                else:
+                    assert getattr(image_name, key) == value
