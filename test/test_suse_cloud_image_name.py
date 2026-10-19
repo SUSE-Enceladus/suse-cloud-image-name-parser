@@ -688,7 +688,7 @@ class TestSUSECloudImageName(object):
                     'is_llc': None,
                     'is_containerized': False,
                     'created_at': datetime.datetime(2025, 7, 24),
-                    'oval_product': UndefinedOvalProductError,
+                    'oval_product': "suse.liberty.linux.8",
                     'short_name': 'multi-linux-support-liberty-linux',
                     'is_sles_plus_foo': False,
                     'is_transup': False,

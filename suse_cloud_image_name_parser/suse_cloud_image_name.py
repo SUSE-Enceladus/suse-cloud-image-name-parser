@@ -662,6 +662,9 @@ class SUSECloudImageName:  # pylint: disable=R0904
                 return "suse.linux.micro." + self.product_version
             return "suse.linux.enterprise.micro." + self.product_version
 
+        if self.is_mls_ll:
+            return "suse.liberty.linux." + self.product_major
+
         if self.is_sle:
             return "suse.linux.enterprise." + self.distro_version_lower
 
